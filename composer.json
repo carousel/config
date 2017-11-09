@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "carousel\\config\\": "src"
+            "Carousel\\Config\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "carousel\\config\\": "tests"
+            "Carousel\\Config\\": "tests"
         }
     },
     "scripts": {
