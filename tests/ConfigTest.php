@@ -11,9 +11,9 @@ class ConfigTest extends \PHPUnit\Framework\TestCase
     */
     public function setUp()
     {
-        $this->emptyConfigFile = 'empty_config_file.php';
-        $this->configFile = 'config_file.php';
-        $this->fakeConfigFile = 'fake_config_file.php';
+        $this->emptyConfigFile = __DIR__ . '/empty_config_file.php';
+        $this->configFile = __DIR__ . '/config_file.php';
+        $this->fakeConfigFile = __DIR__ . '/fake_config_file.php';
         $this->config = new Config($this->configFile);
     }
     
@@ -51,7 +51,7 @@ class ConfigTest extends \PHPUnit\Framework\TestCase
      */
     public function configFileReturnsEmptyArray()
     {
-        $configFile = require 'empty_config_file.php';
+        $configFile = require __DIR__ . '/empty_config_file.php';
         $this->assertEmpty($configFile);
     }
     /**
@@ -61,7 +61,7 @@ class ConfigTest extends \PHPUnit\Framework\TestCase
      */
     public function configFileReturnsNotEmptyArray()
     {
-        $configFile = require 'config_file.php';
+        $configFile = require __DIR__ . '/config_file.php';
         $this->assertArrayHasKey('UserCreated', $configFile);
     }
     /**
